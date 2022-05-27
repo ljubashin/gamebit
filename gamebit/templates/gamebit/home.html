@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}GameBit home{% endblock title %}
+{% block css_files %}
+        <link rel="stylesheet" href="{% static '/home.css' %}">
+{% endblock css_files %}
+{% block content %}
+<div id="div1">
+    <h1>Welcome to GameBit</h1>
+</div>
+<div id="div2">
+    <h1>Newly added</h1>
+    <div>
+    {% for game in games %}
+    {% include 'gamebit/includes/game.html' %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock content %}
