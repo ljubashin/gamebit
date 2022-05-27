@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Store
+{% endblock title %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static '/store.css' %}">
+    <link rel="stylesheet" href="{% static '/game-cards.css' %}">
+{% endblock css_files %}
+{% block content %}
+        <h2>GameBit Store</h2>
+        <div class="l-container" style="margin-top:5%;">
+        {% for game in all_games %}
+        {% include 'gamebit/includes/game-cards.html' %}
+        {% endfor %}
+            </div>
+
+{% endblock content %}
