@@ -1,0 +1,9 @@
+{% load static %}
+
+<div class="container">
+    <img class="image" src="{{game.backgroundImage.url}}">    
+    <div class="overlay">
+      <img class="title" src="{{ game.image.url}}"></img>
+      <a class="button" href="{% url "game-detail" game.slug %}">VISIT</a>
+  </div>
+</div>
