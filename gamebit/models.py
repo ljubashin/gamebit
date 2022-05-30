@@ -43,3 +43,9 @@ class Game(models.Model):
     def __str__(self):
         return self.title
         
+class Review(models.Model):
+    user_name = models.CharField(max_length= 50)
+    text = models.CharField(max_length=300)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name="reviews")
+    like = models.BooleanField()
+    dislike = models.BooleanField(default = False)
