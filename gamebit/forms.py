@@ -11,4 +11,9 @@ class Reviewform(forms.ModelForm):
             "like": "Do you like this game",
             "dislike": "Do you dislike this game"
         }
-        
+        widgets = {
+            "user_name" : forms.TextInput(attrs={'class': "form__field"}),
+            "text" : forms.TextInput(attrs={'class': "form__field"}),
+            "like" : forms.CheckboxInput(attrs={'class': "boolean"}),
+            "dislike" : forms.CheckboxInput(attrs={'class': "noboolean"}),
+        }
