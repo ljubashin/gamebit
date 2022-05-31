@@ -5,3 +5,4 @@ from gamebit.models import Game, Category, gameStudio, Review
 
 admin.site.register(Category)
 admin.site.register(gameStudio)
+admin.site.register(Review)
